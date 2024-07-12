@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4 mb-4">Teacher List</h1>
+    <ul class="list-group">
+        {% for t in teachers %}
+        <li class="list-group-item">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">name:{{t.name}}</h5>
+            </div>
+            <p class="mb-1">picture_url:{{t.picture_url}}</p>
+            <p class="mb-1">uuid:{{t.uuid}}</p>
+            <p class="mb-1">profile:{{t.profile}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="mt-4">
+        <a href="/register" class="btn btn-primary">Register a Teacher</a>
+    </div>
+</div>
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
